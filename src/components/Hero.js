@@ -16,6 +16,12 @@ const Hero = ({ theme }) => {
 
     return () => clearInterval(interval);
   }, []);
+  function openGmail() {
+    const email = "vaishalirajpurohit26@gmail.com";
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+    window.open(url,"_blank");
+  }
+
 
   return (
     <section className={`text-center py-5 hero-section ${theme}`}>
@@ -59,8 +65,7 @@ const Hero = ({ theme }) => {
             I’m a <span className="highlight">Data Analyst</span> passionate about transforming raw data into meaningful insights.
             Skilled in <span className="highlight">Power BI</span>, <span className="highlight">Python</span>, <span className="highlight">SQL</span>, and <span className="highlight">Excel</span>.
           </p>
-
-          <a href="#contact" className="btn-hire">Hire Me</a>
+          <a onClick={openGmail} className="btn-hire" role="button">Hire Me</a>
         </div>
 
         {/* Right Side: Image */}
